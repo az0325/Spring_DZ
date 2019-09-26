@@ -12,6 +12,7 @@
   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="pack01" />
+	<context:component-scan base-package="pack02" />
 
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
@@ -19,5 +20,7 @@
 	<mvc:view-resolvers>
 		<mvc:jsp prefix="/WEB-INF/views/" />
 	</mvc:view-resolvers>
+	
+	<mvc:view-controller path="/t8" view-name="LionView"/><!-- 컨트롤러 경유 없이 이동 -->
 
 </beans>
